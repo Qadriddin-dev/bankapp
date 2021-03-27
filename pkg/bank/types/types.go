@@ -28,4 +28,9 @@ type Payment struct {
 	Amount Money
 }
 
+type PaymentSource struct {
+	Type string
+	Number string
+	Balance Money
+}
 
