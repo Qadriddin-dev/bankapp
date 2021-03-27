@@ -14,4 +14,5 @@ func ExampleTotal() {
 	}
 	fmt.Println(Total(cards))
 	//Output:100000
+	
 }
