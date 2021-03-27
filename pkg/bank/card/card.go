@@ -18,7 +18,7 @@ func Total(cards []types.Card) types.Money {
 	return sum
 }
 
-func PaymentSource(cards []types.Card) []types.PaymentSource {
+func PaymentSources(cards []types.Card) []types.PaymentSource {
 	var payment []types.PaymentSource
 	for _, card := range cards {
 		if !card.Active {
