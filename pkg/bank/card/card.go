@@ -5,18 +5,15 @@ import (
 )
 
 func Total(cards []types.Card) types.Money {
-	var sum types.Money = 0
+	sum :=  types.Money(0)
 	for _, card := range cards {
+		if !card.Active {
+			continue
+		}
+		if card.Balance <= 0 {
+			continue
+		}
 		sum += card.Balance
-
-		if card.Active == false {
-			break
-		}
-		if sum < 0 {
-			break
-		}
-
 	}
-
 	return sum
 }
